@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>The Brogrammer Fact</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+		<wicket:extend>
+            <h3>Please fill the fields bellow to add a new brogrammer fact!</h3>
+			<form>
+                <label for="fact">Brogrammer Fact:</label> <input name="fact" type="text" maxlength="50" />
+                <label for="authorEmail">Your Email:</label> <input name="authorEmail" type="text" maxlength="255"/>
+                <input type="submit">
+            </form>
+		</wicket:extend>
+	</body>
+</html>
