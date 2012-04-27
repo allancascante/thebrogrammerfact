@@ -1,5 +1,7 @@
 package com.bodybuilding.thebrogrammerfact.ui.pages;
 
+import com.bodybuilding.thebrogrammerfact.ui.models.BrogrammerFactsModel;
+import com.bodybuilding.thebrogrammerfact.ui.panels.LatestFactsPanel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.WebPage;
@@ -13,5 +15,6 @@ public class HomePage extends BasePage {
      */
     public HomePage(final PageParameters parameters) {
 
+        add(new LatestFactsPanel("latestFactPanel", new BrogrammerFactsModel()));
     }
 }

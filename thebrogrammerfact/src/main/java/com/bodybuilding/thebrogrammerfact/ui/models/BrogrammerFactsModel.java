@@ -11,11 +11,10 @@ import java.util.Set;
 /**
  * @author Allan Cascante (allan.cascante@bodybuilding.com)
  */
-public class BrogrammerFactsModel extends Model<HashSet<BrogrammerFact>>{
+public class BrogrammerFactsModel extends Model<BrogrammerFact>{
 
     public BrogrammerFactsModel() {
 
-        HashSet<BrogrammerFact> object = new HashSet<BrogrammerFact>();
         BrogrammerFact brogrammerFact = new BrogrammerFact();
 
         brogrammerFact.setFact("Brogrammers write code in between push-ups");
@@ -23,9 +22,7 @@ public class BrogrammerFactsModel extends Model<HashSet<BrogrammerFact>>{
         brogrammerFact.setDateAdded(new Date());
         brogrammerFact.setDeleted(false);
 
-        object.add(brogrammerFact);
-
-        this.setObject(object);
+        this.setObject(brogrammerFact);
     }
 
 }
