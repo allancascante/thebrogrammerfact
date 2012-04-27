@@ -4,8 +4,6 @@ import com.bodybuilding.thebrogrammerfact.entities.BrogrammerFact;
 import org.apache.wicket.model.Model;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 
 /**
