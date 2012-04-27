@@ -1,5 +1,6 @@
-package com.bodybuilding;
+package com.bodybuilding.thebrogrammerfact;
 
+import com.bodybuilding.thebrogrammerfact.ui.pages.HomePage;
 import org.apache.wicket.protocol.http.WebApplication;
 
 /**

@@ -1,5 +1,7 @@
 package com.bodybuilding;
 
+import com.bodybuilding.thebrogrammerfact.ui.pages.HomePage;
+import com.bodybuilding.thebrogrammerfact.WicketApplication;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Test;
