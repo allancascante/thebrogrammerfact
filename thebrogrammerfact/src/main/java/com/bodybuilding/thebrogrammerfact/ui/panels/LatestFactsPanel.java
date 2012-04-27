@@ -17,7 +17,7 @@ public class LatestFactsPanel extends Panel {
         super(id, brogrammerFactsModel);
 
         add(new Label("lastBrogrammerFactLabel", new PropertyModel<String>(getDefaultModel(), "fact")));
-        add(new BookmarkablePageLink("addNewFactLink", AddAFactPage.class));
+        add(new BookmarkablePageLink<AddAFactPage>("addNewFactLink", AddAFactPage.class));
     }
 
 
