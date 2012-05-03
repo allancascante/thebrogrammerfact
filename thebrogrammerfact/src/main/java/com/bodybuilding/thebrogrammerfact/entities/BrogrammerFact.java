@@ -13,6 +13,21 @@ public class BrogrammerFact implements Serializable {
     private String authorEmail;
     private boolean deleted;
 
+    public BrogrammerFact(){
+        this.fact = "";
+        this.authorEmail = "";
+        this.dateAdded = new Date();
+        this.deleted = false;
+    }
+
+    public BrogrammerFact(String fact, String authorEmail){
+
+        this.fact = fact;
+        this.authorEmail = authorEmail;
+        this.dateAdded = new Date();
+        this.deleted = false;
+    }
+
     public String getFact() {
         return fact;
     }

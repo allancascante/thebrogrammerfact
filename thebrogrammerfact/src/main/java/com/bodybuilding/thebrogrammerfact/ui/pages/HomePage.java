@@ -17,7 +17,8 @@ public class HomePage extends BasePage {
     public HomePage(final PageParameters parameters) {
 
         visitCount++;
-        add(new LatestFactsPanel("latestFactPanel", new BrogrammerFactsModel()));
+        BrogrammerFactsModel brogrammerFactsModel = new BrogrammerFactsModel();
+        add(new LatestFactsPanel("latestFactPanel", brogrammerFactsModel));
         add(new Label("visitCountLabel", visitCount.toString()));
     }
 }
