@@ -2,10 +2,13 @@ package com.bodybuilding.thebrogrammerfact.ui.pages;
 
 import com.bodybuilding.thebrogrammerfact.entities.BrogrammerFact;
 import com.bodybuilding.thebrogrammerfact.ui.models.BrogrammerFactsModel;
+import org.apache.wicket.markup.html.form.EmailTextField;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
+import org.apache.wicket.validation.validator.EmailAddressValidator;
 
 /**
  * @author Allan Cascante (allan.cascante@bodybuilding.com)
@@ -24,8 +27,13 @@ public class AddAFactPage extends BasePage {
                 this.getRequestCycle().setResponsePage(HomePage.class);
             }
         };
-        addFactForm.add(new TextField<String>("factInput", new PropertyModel<String>(brogrammerFact, "fact")));
-        addFactForm.add(new TextField<String>("authorEmailInput", new PropertyModel<String>(brogrammerFact, "authorEmail")));
+        TextField<String> factInputTextField = new TextField<String>("factInput", new PropertyModel<String>(brogrammerFact, "fact"));
+        factInputTextField.setRequired(true);
+        addFactForm.add(factInputTextField);
+        EmailTextField emailTextField = new EmailTextField("authorEmailInput", new PropertyModel<String>(brogrammerFact, "authorEmail"), EmailAddressValidator.getInstance());
+        addFactForm.add(emailTextField);
+        emailTextField.setRequired(true);
+        addFactForm.add(new FeedbackPanel("feedbackPanel"));
         add(addFactForm);
 
     }

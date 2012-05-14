@@ -8,9 +8,10 @@
 	<body>
 		<wicket:extend>
             <h3>Please fill the fields bellow to add a new brogrammer fact!</h3>
-			<form wicket:id="addFactForm">
+            <form wicket:id="addFactForm">
+                <div wicket:id="feedbackPanel"></div>
                 <label for="fact">Brogrammer Fact:</label> <input wicket:id="factInput" name="fact" type="text" maxlength="255" onclick="this.value=''" />
-                <label for="authorEmail">Your Email:</label> <input wicket:id="authorEmailInput" name="authorEmail" type="text" onclick="this.value=''" maxlength="255"/>
+                <label for="authorEmail">Your Email:</label> <input wicket:id="authorEmailInput" name="authorEmail" type="email" onclick="this.value=''" maxlength="255"/>
                 <input type="submit">
             </form>
 		</wicket:extend>
