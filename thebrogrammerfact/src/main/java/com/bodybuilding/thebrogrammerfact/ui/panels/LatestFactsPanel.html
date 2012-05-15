@@ -9,7 +9,11 @@
 	<body>
 		<wicket:panel>
             <h2>Recent Brogrammers Facts:</h2>
-            <p wicket:id="lastBrogrammerFactLabel"><!--We are going to add the text of the fact in here and this comment will be replaced by it--></p>
+            <ul >
+                <li wicket:id="lastBrogrammerFacts"> this item will be used as a template
+                    <span wicket:id="lastBrogrammerFact">this will be replaced</span>
+                </li>
+            </ul>
             <a wicket:id="addNewFactLink">Share your knowledge add a new fact about brogrammers!</a>
 		</wicket:panel>
 	</body>
