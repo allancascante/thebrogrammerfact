@@ -9,7 +9,9 @@ import org.apache.wicket.protocol.http.WebApplication;
  * @see com.bodybuilding.Start#main(String[])
  */
 public class WicketApplication extends WebApplication
-{    	
+{
+    private long visitCount;
+
 	/**
 	 * @see org.apache.wicket.Application#getHomePage()
 	 */
@@ -29,4 +31,12 @@ public class WicketApplication extends WebApplication
 
 		// add your configuration here
 	}
+
+    public long getVisitCount() {
+        return visitCount;
+    }
+
+    public void setVisitCount(long visitCount) {
+        this.visitCount = visitCount;
+    }
 }
